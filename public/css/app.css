@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #FBF5F3; /* Cor de fundo suave */
+    color: #3D5467; /* Cor do texto principal */
+}
+
+.navbar {
+    background-color: #DB5461; /* Cor da barra de navegação */
+}
+
+.navbar a {
+    color: #FBF5F3; /* Cor do texto dos links */
+}
+
+.navbar a:hover {
+    color: #00A8E8; /* Cor do texto ao passar o mouse */
+}
+
+.container {
+    margin-top: 20px; /* Espaçamento superior do container */
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    border: 1px solid #686963; /* Bordas das células */
+    padding: 12px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto */
+}
+
+.table th {
+    background-color: #3D5467; /* Cor do cabeçalho da tabela */
+    color: #FBF5F3; /* Cor do texto do cabeçalho */
+}
+
+.btn {
+    background-color: #00A8E8; /* Cor do botão */
+    color: #FBF5F3; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento do botão */
+    border: none; /* Sem bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.btn:hover {
+    background-color: #DB5461; /* Cor do botão ao passar o mouse */
+}
+
+.footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px 0; /* Espaçamento no rodapé */
+    color: #686963; /* Cor do texto do rodapé */
+}
