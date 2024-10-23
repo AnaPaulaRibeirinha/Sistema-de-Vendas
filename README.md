@@ -1,6 +1,6 @@
 # Sistema de Vendas
 
-[Sistema de Vendas]
+Este é um sistema de vendas criado para simular situações de venda.
 
 ## Índice
 
