@@ -1,6 +1,6 @@
 # Sistema de Vendas
 
-![Sistema de Vendas]
+[Sistema de Vendas]
 
 ## Índice
 
