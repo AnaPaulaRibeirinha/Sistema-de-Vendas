@@ -11,6 +11,7 @@
                 <th>#</th>
                 <th>Cliente</th>
                 <th>Valor Total</th>
+                <th>Parcelas</th>
                 <th>Data</th>
                 <th>Ações</th>
             </tr>
@@ -19,9 +20,14 @@
             @foreach ($sales as $sale)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $sale->customer->name }}</td> <!-- Supondo que você tenha uma relação de cliente -->
-                    <td>{{ number_format($sale->total, 2, ',', '.') }} R$</td> <!-- Exibe o valor total formatado -->
-                    <td>{{ $sale->created_at->format('d/m/Y') }}</td> <!-- Formata a data -->
+                    <td>{{ $sale->customer->name ?? 'N/A' }}</td>
+                    <td>{{ number_format($sale->total_amount, 2, ',', '.') }} R$</td>
+                    <td>
+                        @foreach ($sale->installments as $installment)
+                            <div>Parcela de {{ number_format($installment->amount, 2, ',', '.') }} R$ - {{ $installment->due_date->format('d/m/Y') }}</div>
+                        @endforeach
+                    </td>
+                    <td>{{ $sale->created_at->format('d/m/Y') }}</td> 
                     <td>
                         <a href="{{ route('sales.edit', $sale) }}" class="text-blue-500 hover:underline">Editar</a>
                         <form action="{{ route('sales.destroy', $sale) }}" method="POST" style="display:inline;">
