@@ -6,7 +6,7 @@
     <form action="{{ route('sales.store') }}" method="POST">
         @csrf
         <div class="mb-4">
-            <label for="customer" class="block text-gray-700">Cliente (Opcional)</label>
+            <label for="customer" class="block text-gray-700">Cliente</label>
             <select name="customer_id" id="customer" class="form-control">
                 <option value="">Selecione um cliente</option>
                 @foreach($customers as $customer)

@@ -10,7 +10,7 @@ class Installments extends Model
     /** @use HasFactory<\Database\Factories\InstallmentsFactory> */
     use HasFactory;
 
-    protected $fillable = ['sale_id', 'amout', 'due_date'];
+    protected $fillable = ['sale_id', 'amount', 'due_date'];
 
     protected $casts = [
         'due_date' => 'datetime',

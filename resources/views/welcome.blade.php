@@ -14,7 +14,6 @@
             <!-- Exemplo de produtos ou itens em destaque -->
             @foreach ($featuredProducts as $product)
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="w-full h-48 object-cover rounded-lg mb-2">
                     <h2 class="text-lg font-bold text-686963">{{ $product->name }}</h2>
                     <p class="text-db5461">R$ {{ number_format($product->price, 2, ',', '.') }}</p>
                     <a href="{{ route('products.show', $product) }}" class="btn mt-2 bg-686963 text-white hover:bg-3d5467">Ver detalhes</a>

@@ -21,7 +21,6 @@
                     <td>{{ $customer->name }}</td>
                     <td>{{ $customer->cpf }}</td>
                     <td>
-                        <a href="{{ route('customer.edit', $customer) }}" class="text-blue-500 hover:underline">Editar</a>
                         <form action="{{ route('customer.destroy', $customer) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')

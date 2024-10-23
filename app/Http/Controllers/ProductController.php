@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $allProducts = Product::all();
         $featuredProducts = Product::where('featured', true)->get();
         return view('products.index', compact('featuredProducts', 'allProducts'));
     }
@@ -54,5 +54,14 @@ class ProductController extends Controller
     {
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Produto excluído com sucesso!');
+    }
+
+    public function show($id)
+    {
+        
+        $product = Product::findOrFail($id);
+
+
+        return view('products.show', compact('product'));
     }
 }
